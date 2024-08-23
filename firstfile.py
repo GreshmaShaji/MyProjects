@@ -19,17 +19,18 @@ movie_database = {
 
 }
 
-user_genre = input("Enter your preferences with comma separeted: ").split(',')
-recommended_movies = []
+user_genre = input("Enter your preference: ").split(',')
 
-for movie, genres in movie_database.items():
+recommended_movie = []
+
+for movie , genres in movie_database.items():
     for genre in genres:
-         if genre in user_genre:
-              recommended_movies.append(movie)
-              break
+        if genre in user_genre:
+            recommended_movie.append(movie)
+            break
+        
 
-# Output Recommendation
-if recommended_movies:
-    print("Recommended movies based on your preferences:", ', '.join(recommended_movies))
+if recommended_movie:
+    print("Recommended movies based on your preferences: ",','.join(recommended_movie))
 else:
-    print("Sorry, no movies found matching your preferred genres.")            
+    print("Sorry, no movies found")
