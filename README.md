@@ -1,2 +1,2 @@
 # MyProjects
-This is my new repository
+Python Fundamentals
